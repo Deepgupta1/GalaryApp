@@ -14,10 +14,18 @@ interface NetworkService {
     suspend fun getPhotos(
         @Query("method") method: String,
         @Query("per_page") per_page: String,
-        @Query("page") page: String,
+        @Query("page") page: Int,
         @Query("api_key") api_key: String,
         @Query("format") format: String,
         @Query("nojsoncallback") nojsoncallback: String,
         @Query("extras") extras: String
     ): Response<pics>
 }
+
+
+
+
+
+
+
+ 
