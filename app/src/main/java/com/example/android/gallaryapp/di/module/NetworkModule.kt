@@ -2,6 +2,7 @@ package com.example.android.gallaryapp.di.module
 
 import com.example.android.gallaryapp.data.api.NetworkService
 import com.example.android.gallaryapp.utils.AppConstant
+import com.example.android.gallaryapp.utils.AppConstant.BASE_URL
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -17,7 +18,7 @@ class NetworkModule {
     @Singleton
     @Provides
     fun providesRetrofit(): Retrofit {
-        return Retrofit.Builder().baseUrl(AppConstant.BASE_URL)
+        return Retrofit.Builder().baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }

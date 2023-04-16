@@ -29,7 +29,7 @@ class GalaryRepository @Inject constructor(private val networkService: NetworkSe
 
 
     fun getPhotos()=Pager(
-        config = PagingConfig(pageSize = 20, maxSize = 10000),
+        config = PagingConfig(pageSize = 20, maxSize = 100),
         pagingSourceFactory = {PhotoPagingSource(networkService)}
     ).liveData
 }
